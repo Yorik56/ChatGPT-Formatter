@@ -54,7 +54,7 @@ window.onload = function () {
 
 			if (tableFormatter.classList.contains('active') && codeFormatter.classList.contains('active')) {
 				if (codeStyle) {
-					format += `Your next answer will be a table in ${codeStyle.toLowerCase()} : \n\n`;
+					format += `Your next answer will be a table in a code snippet in ${codeStyle.toLowerCase()} format : \n\n`;
 				} else {
 					format += 'Your next answer will be a table in a code snippet in markdown format : \n\n';
 				}

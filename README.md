@@ -11,7 +11,6 @@ FireFox extension: Choose a format for GPT chat responses
 ## Javascript code snippet
 ![img_12.png](assets/demo/img_12.png)![img_13.png](assets/demo/img_13.png)
 
-
 ## Markdown table code snippet
 ![img_14.png](assets/demo/img_14.png)![img_15.png](assets/demo/img_15.png)
 

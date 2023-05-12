@@ -17,4 +17,11 @@ FireFox extension: Choose a format for GPT chat responses, and your prompt will 
 ## HTML table code snippet
 ![img_16.png](assets/demo/img_16.png)![img_17.png](assets/demo/img_17.png)
 
+## TODO
 
+- [x] Table
+- [x] Code
+- [ ] List
+- [ ] Language
+- [ ] Svg
+- [ ] view prompt

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "ChatGPT Formatter",
+  "version": "1.0",
+  "description": "Ajoute des options de formatage pour les réponses de ChatGPT",
+  "icons": {
+    "48": "icons/icon-48.svg",
+    "96": "icons/icon-96.svg"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon-48.svg"
+    },
+    "default_popup": "popup.html",
+    "default_title": "ChatGPT Formatter"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["dist/content-script.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}

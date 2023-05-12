@@ -1,6 +1,6 @@
 # ChatGPT-Formatter
 
-FireFox extension: Choose a format for GPT chat responses
+FireFox extension: Choose a format for GPT chat responses, and your prompt will adapt accordingly.
 
 ## Markdown table 
 ![img_8.png](assets/demo/img_8.png)![img_9.png](assets/demo/img_9.png)

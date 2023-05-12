@@ -46,7 +46,7 @@ window.onload = function () {
 	// Donne moi 5 fruits
 	function updateTextareaValue(textareaElem) {
 		if (textareaElem) {
-			let format = 'Oublie le format de ta réponse précédente, ';
+			let format = 'Forget the format of your previous answer, ';
 			let selection = false;
 			const tableFormatter = document.querySelector('.table_formatter');
 			const codeFormatter = document.querySelector('.code_style_formatter');
@@ -54,30 +54,30 @@ window.onload = function () {
 
 			if (tableFormatter.classList.contains('active') && codeFormatter.classList.contains('active')) {
 				if (codeStyle) {
-					format += `Ta prochaine réponse sera un tableau au format ${codeStyle.toLowerCase()} : \n\n`;
+					format += `Your next answer will be a table in ${codeStyle.toLowerCase()} : \n\n`;
 				} else {
-					format += 'Ta prochaine réponse sera un tableau dans un extrait de code au format markdown : \n\n';
+					format += 'Your next answer will be a table in a code snippet in markdown format : \n\n';
 				}
 				selection = true;
 			} else if (tableFormatter.classList.contains('active')) {
-				format += 'Ta prochaine réponse sera un tableau au format markdown : \n\n';
+				format += 'Your next answer will be a table in markdown format : \n\n';
 				selection = true;
 			} else if (codeFormatter.classList.contains('active')) {
 				if (codeStyle) {
-					format += `Ta prochaine réponse sera un extrait de code au format ${codeStyle.toLowerCase()} : \n\n`;
+					format += `Your next answer will be a code snippet in ${codeStyle.toLowerCase()} : \n\n`;
 				} else {
-					format += 'Ta prochaine réponse sera un extrait de code au format markdown : \n\n';
+					format += 'Your next answer will be a code snippet in markdown format : \n\n';
 				}
 				selection = true;
 			}
 
 			if (!selection) {
-				format += 'Ta prochaine réponse sera formatée en texte : \n\n';
+				format += 'Your next answer will be formatted as text : \n\n';
 			}
 
 			textareaElem.value = format + textareaElem.value;
 		} else {
-			console.error('Champ textarea introuvable');
+			console.error('Textarea not found');
 		}
 	}
 

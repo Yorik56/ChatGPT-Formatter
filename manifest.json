@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "ChatGPT Formatter",
   "version": "1.0",
-  "description": "Ajoute des options de formatage pour les réponses de ChatGPT",
+  "description": "Adds formatting options for ChatGPT responses",
   "icons": {
     "48": "icons/icon-48.svg",
     "96": "icons/icon-96.svg"

@@ -24,4 +24,5 @@ FireFox extension: Choose a format for GPT chat responses, and your prompt will 
 - [ ] List
 - [ ] Language
 - [ ] Svg
-- [ ] view prompt
+- [ ] View/Hide prompt
+- [ ] Silent mode 

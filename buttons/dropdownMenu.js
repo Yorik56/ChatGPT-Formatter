@@ -5,10 +5,10 @@ export function createDropdownMenu(options, onSelectHandler) {
 	const dropdownButton = document.createElement("button");
 	dropdownButton.classList.add("dropdown-button");
 
-	// Remplacer le texte par une icône SVG
+	// Replace the text with an SVG icon
 	const dropdownIcon = document.createElement("img");
-	dropdownIcon.src = chrome.extension.getURL('icons/chevron-down.svg'); // Remplacez par l'URL de l'icône SVG
-	dropdownIcon.alt = "Menu déroulant";
+	dropdownIcon.src = chrome.extension.getURL('icons/chevron-down.svg'); // Replace with the URL of the SVG icon
+	dropdownIcon.alt = "Dropdown Menu";
 	dropdownButton.appendChild(dropdownIcon);
 
 	dropdownButton.addEventListener("click", toggleDropdownMenu);
@@ -21,13 +21,21 @@ export function createDropdownMenu(options, onSelectHandler) {
 		const optionButton = document.createElement("button");
 
 		optionButton.classList.add("dropdown-item");
-		optionButton.textContent = option; // Utiliser la valeur de l'option comme texte du bouton
+		optionButton.textContent = option; // Use the option value as the button text
 		optionButton.addEventListener("click", (event) => {
 			event.preventDefault();
-			onSelectHandler(option, event); // Passer l'option et l'événement en tant qu'arguments au gestionnaire de sélection
+
+			// Add active class to the selected option
+			const activeItem = dropdownMenu.querySelector(".active");
+			if (activeItem) {
+				activeItem.classList.remove("active");
+			}
+			menuItem.classList.add("active");
+
+			onSelectHandler(option, event); // Pass the option and event as arguments to the select handler
 			const formatterCode = document.querySelector(".code_style_formatter");
 			if (formatterCode) {
-				formatterCode.setAttribute("data-code-style", option); // Mettre à jour l'attribut "data-code-style" avec l'option choisie
+				formatterCode.setAttribute("data-code-style", option); // Update the "data-code-style" attribute with the chosen option
 			}
 			closeDropdownMenus();
 		});
@@ -41,11 +49,6 @@ export function createDropdownMenu(options, onSelectHandler) {
 
 	return dropdown;
 }
-
-
-
-
-
 
 export function closeDropdownMenus(event) {
 	const menus = document.querySelectorAll('.dropdown-menu.show');

@@ -20,7 +20,7 @@ export function updateTextareaValue(textareaElem) {
 			format += "The chat interface we're using operates in a web browser and supports markdown syntax, therefore you can incorporate an SVG in your responses which will be displayed in my browser.";
 			format += "Here are the precise steps for successful SVG rendering:\n";
 			format += "- Begin by writing '![svg](data:image/svg+xml;charset=utf8,' immediately follow this with the URL-encoded SVG code, then finish with a closing parenthesis.\n";
-			format += "- The <svg> tag should include the attribute xmlns='http://www.w3.org/2000/svg'. Do not place the SVG code within a code snippet.";
+			format += "- The <svg> tag should include the attribute xmlns='http://www.w3.org/2000/svg'. Do not place the SVG code within a code snippet.\n";
 			selection = true;
 		}
 		if (listButton && listButton.classList.contains('active')) {

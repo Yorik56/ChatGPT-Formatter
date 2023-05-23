@@ -27,17 +27,13 @@ const createDropdownButton = (icon, title, options, btnClass) =>
 		btnClass
 	);
 
-const buttonGroupClass = 'button-group'; // Replace with the actual button group ID or class
-const buttonGroup = document.querySelector(`#${buttonGroupClass}`);
-
 export function createButtons() {
 	const svgButton = createIconButton("svg-icon", "SVG", "svg-button-class");
 	const listButton = createIconButton("list-icon", "Liste", "list-button-class");
 	const tableButton = createIconButton("table-icon", "Tableau", "table-button-class");
 	const textButton = createIconButton("text-icon", "Text", "text-button-class");
 	const silentButton = createIconButton("silent-icon", "Silent", "silent_mode");
-
-	const codeBlockDoubleButton = createDropdownButton("code-icon", "Extrait de code", ["JavaScript", "Python", "HTML", "CSS"], "code_style_formatter");
+	const codeBlockDoubleButton = createDropdownButton("code-icon", "Extrait de code", ["java","javaScript", "python", "html", "css","sass","scss", "bash", "powershell"], "code_style_formatter");
 	const languageDoubleButton = createDropdownButton("language-icon", "Language", ["French", "English", "Japanese", "Korean", "Spanish"], "language_selector");
 
 	return {

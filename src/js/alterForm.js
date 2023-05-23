@@ -24,6 +24,7 @@ export function alterForm() {
 			"border-black/10", "bg-white", "dark:border-gray-900/50", "dark:text-white", "dark:bg-gray-700", "rounded-md",
 			"shadow-[0_0_10px_rgba(0,0,0,0.10)]", "dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]"
 		);
+
 		textareaElem.parentNode.parentNode.insertBefore(divFormatter, textareaElem.parentNode);
 		buttonGroup.addEventListener('click', (event) => {
 			toggleButton(buttonGroup.id, event);

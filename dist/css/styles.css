@@ -81,8 +81,8 @@ button:hover, button.active
     bottom: 100%;
     left: -25px;
     min-width: 100%;
-    background-color: #64646436;
-    color: #8e8ea0;
+    background-color: #646464;
+    color: #f7f7f7;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -98,6 +98,7 @@ button:hover, button.active
     text-align: left;
     border-radius: 0;
     background-color: #f0f0f0;
+    color: #272727;
 }
 
 .dropdown-menu.show {

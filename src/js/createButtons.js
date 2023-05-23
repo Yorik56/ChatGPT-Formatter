@@ -1,9 +1,9 @@
-import { createButtonWithIcon } from '../../buttons/buttonWithIcon.js';
-import { createDoubleButton } from '../../buttons/doubleButton.js';
+import { createButtonWithIcon } from './buttons/buttonWithIcon.js';
+import { createDoubleButton } from './buttons/doubleButton.js';
 
 const createIconButton = (icon, title, btnClass) =>
 	createButtonWithIcon(
-		browser.extension.getURL(`icons/${icon}.svg`),
+		browser.extension.getURL(`assets/icons/${icon}.svg`),
 		title,
 		(event) => {
 			const buttonGroupButtons = document.querySelectorAll('#button-group button');
@@ -18,12 +18,9 @@ const createIconButton = (icon, title, btnClass) =>
 		btnClass
 	);
 
-
-
-
 const createDropdownButton = (icon, title, options, btnClass) =>
 	createDoubleButton(
-		browser.extension.getURL(`icons/${icon}.svg`),
+		browser.extension.getURL(`assets/icons/${icon}.svg`),
 		title,
 		options,
 		(value) => console.log(`Option sélectionnée: ${value}`),

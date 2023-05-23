@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Adds formatting options for ChatGPT responses",
   "icons": {
-    "48": "icons/icon-48.svg",
+    "48": "assets/icons/icon-48.svg",
     "96": "icons/icon-96.svg"
   },
   "permissions": [
@@ -12,7 +12,7 @@
   ],
   "browser_action": {
     "default_icon": {
-      "48": "icons/icon-48.svg"
+      "48": "assets/icons/icon-48.svg"
     },
     "default_popup": "popup.html",
     "default_title": "ChatGPT Formatter"
@@ -21,7 +21,7 @@
     {
       "matches": ["https://chat.openai.com/*"],
       "js": ["dist/content-script.js"],
-      "css": ["styles.css"]
+      "css": ["dist/css/styles.css"]
     }
   ]
 }

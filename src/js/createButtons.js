@@ -38,7 +38,7 @@ export function createButtons() {
 	const silentButton = createIconButton("silent-icon", "Silent", "silent_mode");
 
 	const codeBlockDoubleButton = createDropdownButton("code-icon", "Extrait de code", ["JavaScript", "Python", "HTML", "CSS"], "code_style_formatter");
-	const languageDoubleButton = createDropdownButton("language-icon", "Language", ["Français", "Anglais"], "language_selector");
+	const languageDoubleButton = createDropdownButton("language-icon", "Language", ["French", "English", "Japanese", "Korean", "Spanish"], "language_selector");
 
 	return {
 		svgButton,

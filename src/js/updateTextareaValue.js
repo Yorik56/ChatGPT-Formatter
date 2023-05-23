@@ -13,7 +13,7 @@ export function updateTextareaValue(textareaElem) {
 		const silentButton = document.querySelector('.silent_mode');
 
 		if (textButton && textButton.classList.contains('active')) {
-			format += 'Your next answer will be formatted as text : \n';
+			format += 'Your next answer will be formatted as text.\n';
 			selection = true;
 		}
 		if (svgButton && svgButton.classList.contains('active')) {
@@ -24,22 +24,22 @@ export function updateTextareaValue(textareaElem) {
 			selection = true;
 		}
 		if (listButton && listButton.classList.contains('active')) {
-			format += 'Your next answer will be a list : \n';
+			format += 'Your next answer will be a list.\n';
 			selection = true;
 		}
 		if (tableButton && tableButton.classList.contains('active')) {
-			format += 'Your next answer will be a table : \n';
+			format += 'Your next answer will be a table.\n';
 			selection = true;
 		}
 
 		if (languageButton && languageButton.classList.contains('active')) {
-			const language = languageButton.getAttribute('data-language');
-			format += `Apply the ${language} language : \n\n`;
+			const language = languageButton.getAttribute('data-option'); // Change 'data-language' to 'data-option'
+			format += `Apply the ${language} language.\n`;
 			selection = true;
 		}
 
 		if (codeStyleButton && codeStyleButton.classList.contains('active')) {
-			const codeStyle = codeStyleButton.getAttribute('data-code-style');
+			const codeStyle = codeStyleButton.getAttribute('data-option'); // Change 'data-code-style' to 'data-option'
 			format += `Your next answer will be displayed as a code snippet in ${codeStyle.toLowerCase()} format. \n`;
 			selection = true;
 		}
@@ -47,6 +47,8 @@ export function updateTextareaValue(textareaElem) {
 		if (silentButton && silentButton.classList.contains('active')) {
 			format += 'In your next answer you\'ll Respond in a very concise manner without providing any explanation. \n';
 			selection = true;
+		} else {
+			format += 'Comment what you\'re doing. \n';
 		}
 
 		if (!selection) {

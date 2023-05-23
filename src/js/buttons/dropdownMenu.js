@@ -21,6 +21,7 @@ export function createDropdownMenu(options, onSelectHandler) {
 		optionButton.textContent = option; // Use the option value as the button text
 		optionButton.addEventListener("click", (event) => {
 			event.preventDefault();
+			const selectedOption = optionButton.textContent;
 			// Add active class to the selected option
 			const activeItem = dropdownMenu.querySelector(".active");
 			if (activeItem) {
@@ -33,6 +34,7 @@ export function createDropdownMenu(options, onSelectHandler) {
 				const buttonChild = doubleButtonContainer.querySelector("button");
 				if (buttonChild) {
 					buttonChild.classList.add("active");
+					buttonChild.setAttribute("data-option", selectedOption); // Add data-option attribute with the selected option
 				}
 			}
 			closeDropdownMenus();

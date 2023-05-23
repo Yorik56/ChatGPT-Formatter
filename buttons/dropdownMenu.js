@@ -10,12 +10,9 @@ export function createDropdownMenu(options, onSelectHandler) {
 	dropdownIcon.src = chrome.extension.getURL('icons/chevron-down.svg'); // Replace with the URL of the SVG icon
 	dropdownIcon.alt = "Dropdown Menu";
 	dropdownButton.appendChild(dropdownIcon);
-
 	dropdownButton.addEventListener("click", toggleDropdownMenu);
-
 	const dropdownMenu = document.createElement("ul");
 	dropdownMenu.classList.add("dropdown-menu");
-
 	options.forEach((option) => {
 		const menuItem = document.createElement("li");
 		const optionButton = document.createElement("button");
@@ -24,29 +21,27 @@ export function createDropdownMenu(options, onSelectHandler) {
 		optionButton.textContent = option; // Use the option value as the button text
 		optionButton.addEventListener("click", (event) => {
 			event.preventDefault();
-
 			// Add active class to the selected option
 			const activeItem = dropdownMenu.querySelector(".active");
 			if (activeItem) {
 				activeItem.classList.remove("active");
 			}
 			menuItem.classList.add("active");
-
-			onSelectHandler(option, event); // Pass the option and event as arguments to the select handler
-			const formatterCode = document.querySelector(".code_style_formatter");
-			if (formatterCode) {
-				formatterCode.setAttribute("data-code-style", option); // Update the "data-code-style" attribute with the chosen option
+			// Find the parent .double-button-container and add active class to its direct button child
+			const doubleButtonContainer = dropdown.closest(".double-button-container");
+			if (doubleButtonContainer) {
+				const buttonChild = doubleButtonContainer.querySelector("button");
+				if (buttonChild) {
+					buttonChild.classList.add("active");
+				}
 			}
 			closeDropdownMenus();
 		});
-
 		menuItem.appendChild(optionButton);
 		dropdownMenu.appendChild(menuItem);
 	});
-
 	dropdown.appendChild(dropdownButton);
 	dropdown.appendChild(dropdownMenu);
-
 	return dropdown;
 }
 

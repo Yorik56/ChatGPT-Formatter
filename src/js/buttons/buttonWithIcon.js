@@ -1,10 +1,13 @@
-export function createButtonWithIcon(iconSrc, altText, onClickHandler, buttonClasses = []) {
+export function createButtonWithIcon(iconSrc, altText, title, onClickHandler, buttonClasses = []) {
 	const button = document.createElement('button');
 	const icon = document.createElement('img');
 
 	icon.src = iconSrc;
 	icon.alt = altText;
 	button.appendChild(icon);
+
+	// Set the title attribute for the button
+	button.title = title;
 
 	if (typeof buttonClasses === 'string') {
 		buttonClasses = [buttonClasses];

@@ -1,10 +1,11 @@
 import { createButtonWithIcon } from './buttonWithIcon.js';
 import { createDropdownMenu } from './dropdownMenu.js';
 
-export function createDoubleButton(iconSrc, altText, options, onSelectHandler, leftButtonClass, rightDropdownClass) {
+export function createDoubleButton(iconSrc, altText, title, options, onSelectHandler, leftButtonClass, rightDropdownClass) {
 	const doubleButtonContainer = document.createElement("div");
 	doubleButtonContainer.classList.add("double-button-container");
-	const leftButton = createButtonWithIcon(iconSrc, altText, () => {
+
+	const leftButton = createButtonWithIcon(iconSrc, altText, title, () => {
 		leftButton.classList.toggle("active"); // Toggle la classe "active" sur le bouton gauche
 		const formatterCode = document.querySelector(".code_style_formatter");
 		if (formatterCode) {

@@ -1,1 +1,5 @@
 /node_modules/
+/dist/
+/.idea/ChatGPT Formatter.iml
+/.idea/git_toolbox_prj.xml
+/.idea/php.xml

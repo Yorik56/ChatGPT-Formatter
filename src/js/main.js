@@ -1,6 +1,7 @@
 import { alterForm } from './alterForm.js';
 import { updateTextareaValue } from './updateTextareaValue.js';
 import { closeDropdownMenus } from './buttons/dropdownMenu.js';
+import '../css/styles.css';
 
 document.addEventListener("click", closeDropdownMenus);
 

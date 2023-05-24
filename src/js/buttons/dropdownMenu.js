@@ -7,7 +7,7 @@ export function createDropdownMenu(options, onSelectHandler) {
 
 	// Replace the text with an SVG icon
 	const dropdownIcon = document.createElement("img");
-	dropdownIcon.src = chrome.extension.getURL('assets/icons/chevron-down.svg'); // Replace with the URL of the SVG icon
+	dropdownIcon.src = chrome.runtime.getURL('assets/icons/chevron-down.svg'); // Replace with the URL of the SVG icon
 	dropdownIcon.alt = "Dropdown Menu";
 	dropdownButton.appendChild(dropdownIcon);
 	dropdownButton.addEventListener("click", toggleDropdownMenu);
@@ -58,6 +58,7 @@ function toggleDropdownMenu(event) {
 	event.preventDefault();
 	const dropdown = event.currentTarget.closest(".dropdown");
 	if (dropdown) {
+		closeDropdownMenus(); // Fermer tous les autres menus déroulants
 		const menu = dropdown.querySelector(".dropdown-menu");
 		menu.classList.toggle("show");
 		event.stopPropagation();

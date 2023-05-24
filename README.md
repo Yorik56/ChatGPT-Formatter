@@ -15,15 +15,15 @@ Ensure you have the following installed on your system:
 
 1. Clone the repository:
 ```bash
-    git clone https://github.com/Yorik56/ChatGPT-Formatter ChatGPT-Formatter
+git clone https://github.com/Yorik56/ChatGPT-Formatter ChatGPT-Formatter
 ```
 2. Navigate into the project directory:
 ```bash
-    cd ChatGPT-Formatter
+cd ChatGPT-Formatter
 ```
 3. Install the dependencies:
 ```bash
-    npm install
+npm install
 ```
 
 ## Building
@@ -31,7 +31,7 @@ Ensure you have the following installed on your system:
 To build the extension, run:
 
 ```bash
-    npm run build
+npm run build
 ```
 
 This will generate a `dist` folder with the extension files.

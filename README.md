@@ -41,7 +41,7 @@ This will generate a `dist` folder with the extension files.
 Load the extension into Firefox for testing by following these steps:
 
 1. Open Firefox and enter `about:debugging` in the address bar.
-2. Click on "Load Temporary Add-on” and select the `manifest.json` file in the `dist` folder.
+2. Click on "Load Temporary Add-on” and select the `manifest.json` at the root of the project.
 
 ## Contact
 

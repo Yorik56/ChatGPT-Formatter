@@ -1,9 +1,11 @@
+let browser = browser || chrome;
+
 import { createButtonWithIcon } from './buttons/buttonWithIcon.js';
 import { createDoubleButton } from './buttons/doubleButton.js';
 
 const createIconButton = (icon, title, btnClass) =>
 	createButtonWithIcon(
-		browser.runtime.getURL(`assets/icons/${icon}.svg`),
+		browser.runtime.getURL(`dist/assets/icons/${icon}.svg`),
 		title,  // altText will be the same as title in this case
 		title,  // adding title here
 		(event) => {
@@ -22,7 +24,7 @@ const createIconButton = (icon, title, btnClass) =>
 
 const createDropdownButton = (icon, title, options, btnClass) =>
 	createDoubleButton(
-		browser.runtime.getURL(`assets/icons/${icon}.svg`),
+		browser.runtime.getURL(`dist/assets/icons/${icon}.svg`),
 		title, // altText will be the same as title in this case
 		title, // adding title here
 		options,

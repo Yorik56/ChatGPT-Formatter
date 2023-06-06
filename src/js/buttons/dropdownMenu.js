@@ -7,7 +7,7 @@ export function createDropdownMenu(options, onSelectHandler) {
 
 	// Replace the text with an SVG icon
 	const dropdownIcon = document.createElement("img");
-	dropdownIcon.src = chrome.runtime.getURL('assets/icons/chevron-down.svg'); // Replace with the URL of the SVG icon
+	dropdownIcon.src = chrome.runtime.getURL('dist/assets/icons/chevron-down.svg'); // Replace with the URL of the SVG icon
 	dropdownIcon.alt = "Dropdown Menu";
 	dropdownButton.appendChild(dropdownIcon);
 	dropdownButton.addEventListener("click", toggleDropdownMenu);

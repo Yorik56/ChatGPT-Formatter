@@ -1,18 +1,23 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "ChatGPT Formatter",
   "version": "1.0",
-  "description": "Adds formatting options for ChatGPT responses",
-  "icons": {
-    "48": "assets/icons/icon-48.svg",
-    "96": "assets/icons/icon-96.svg"
-  },
+  "description": "ChatGPT Formatter : découvrez un contrôle précis sur vos interactions avec ChatGPT. Personnalisez le format (texte, table), sélectionnez le langage, mode silencieux et plus !",
   "permissions": [
     "activeTab"
   ],
-  "browser_action": {
+  "icons": {
+    "16": "dist/assets/icons/icon-16.png",
+    "48": "dist/assets/icons/icon-48.png",
+    "96": "dist/assets/icons/icon-96.png",
+    "128": "dist/assets/icons/icon-128.png"
+  },
+  "action": {
     "default_icon": {
-      "48": "assets/icons/icon-48.svg"
+      "16": "dist/assets/icons/icon-16.png",
+      "48": "dist/assets/icons/icon-48.png",
+      "96": "dist/assets/icons/icon-96.png",
+      "128": "dist/assets/icons/icon-128.png"
     },
     "default_title": "ChatGPT Formatter"
   },
@@ -21,6 +26,15 @@
       "matches": ["https://chat.openai.com/*"],
       "js": ["dist/content-script.js"],
       "css": ["dist/css/styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dist/assets/icons/*.png",
+        "dist/assets/icons/*.svg"
+      ],
+      "matches": ["https://chat.openai.com/*"]
     }
   ]
 }

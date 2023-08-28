@@ -29,6 +29,13 @@ export function alterForm() {
 		buttonGroup.addEventListener('click', (event) => {
 			toggleButton(buttonGroup.id, event);
 		});
+		// Vérifier si textareaElem.parentNode.parentNode existe et ajouter la classe
+		if (textareaElem && textareaElem.parentNode && textareaElem.parentNode.parentNode) {
+			console.log('textareaElem.parentNode.parentNode exists', textareaElem.parentNode.parentNode);
+			textareaElem.parentNode.parentNode.classList.add('flex-col');
+		} else {
+			console.error('textareaElem.parentNode.parentNode does not exist');
+		}
 	} else {
 		console.error('Formulaire introuvable');
 	}

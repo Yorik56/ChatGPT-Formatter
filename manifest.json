@@ -2,8 +2,7 @@
   "manifest_version": 3,
   "name": "ChatGPT Formatter",
   "version": "1.1",
-  "id": "ea6f1a60-8c7b-11eb-8dcd-0242ac130003",
-  "description": "ChatGPT Formatter : découvrez un contrôle précis sur vos interactions avec ChatGPT. Personnalisez le format (texte, table), sélectionnez le langage, mode silencieux et plus !",
+  "description": "ChatGPT Formatter: découvrez un contrôle précis sur vos interactions avec ChatGPT. Personnalisez le format (texte, table), sélectionnez le langage, mode silencieux et plus !",
   "permissions": [
     "activeTab"
   ],
@@ -37,5 +36,10 @@
       ],
       "matches": ["https://chat.openai.com/*"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chatgpt-formatter@example.com"
+    }
+  }
 }

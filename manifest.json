@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "ChatGPT Formatter",
-  "version": "1.1",
-  "description": "ChatGPT Formatter: découvrez un contrôle précis sur vos interactions avec ChatGPT. Personnalisez le format (texte, table), sélectionnez le langage, mode silencieux et plus !",
+  "name": "Chat GPT ToolKit",
+  "version": "1.2",
+  "id": "4384aa2e-988f-408d-9a0b-7ea3b2c74c42",
+  "description": "Chat GPT ToolKit: découvrez un contrôle précis sur vos interactions avec ChatGPT. Personnalisez le format (texte, table), sélectionnez le langage, mode silencieux et plus !",
   "permissions": [
     "activeTab"
   ],
@@ -39,7 +40,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
-      "id": "chatgpt-formatter@example.com"
+      "id": "{4384aa2e-988f-408d-9a0b-7ea3b2c74c42}"
     }
   }
 }

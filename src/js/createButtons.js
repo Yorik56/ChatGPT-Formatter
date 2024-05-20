@@ -33,13 +33,14 @@ const createDropdownButton = (icon, title, options, btnClass) =>
 	);
 
 export function createButtons() {
-	const textButton = createIconButton("text-icon", "Raw text", "text-button-class");
-	const svgButton = createIconButton("svg-icon", "SVG", "svg-button-class");
-	const listButton = createIconButton("list-icon", "List", "list-button-class");
-	const tableButton = createIconButton("table-icon", "Table", "table-button-class");
-	const silentButton = createIconButton("silent-icon", "Silent mode (ask GPT to be concise)", "silent_mode");
+	const textButton = createIconButton("text-icon", "Raw text", ["text-button-class", "buttonHover"]);
+	const svgButton = createIconButton("svg-icon", "SVG", ["svg-button-class", "buttonHover"]);
+	const listButton = createIconButton("list-icon", "List", ["list-button-class", "buttonHover"]);
+	const tableButton = createIconButton("table-icon", "Table", ["table-button-class", "buttonHover"]);
+	const silentButton = createIconButton("silent-icon", "Silent mode (ask GPT to be concise)", ["silent_mode", "buttonHover"]);
 	const languageDoubleButton = createDropdownButton("language-icon", "Chose language", ["French", "English", "Japanese", "Korean", "Spanish"], "language_selector");
 	const codeBlockDoubleButton = createDropdownButton("code-icon", "Code snippet", ["markdown","java","javaScript", "python", "html", "css","sass","scss", "bash", "powershell"], "code_style_formatter");
+	const drupalVersionButton = createDropdownButton("drupal-icon", "Choose Drupal Version", ["7", "8", "9", "10", "11"], "drupal_version_selector");
 
 	return {
 		svgButton,
@@ -48,6 +49,7 @@ export function createButtons() {
 		codeBlockDoubleButton,
 		languageDoubleButton,
 		textButton,
-		silentButton
+		silentButton,
+		drupalVersionButton
 	};
 }

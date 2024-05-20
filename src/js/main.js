@@ -4,7 +4,7 @@ import { closeDropdownMenus } from './buttons/dropdownMenu.js';
 import '../css/styles.css';
 document.addEventListener("click", closeDropdownMenus);
 alterForm();
-const form = document.querySelector('form.stretch');
+const form = document.querySelector('form');
 if (form) {
 	form.addEventListener('submit', (event) => {
 		const textareaElem = document.querySelector('textarea');

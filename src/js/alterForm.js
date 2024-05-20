@@ -14,7 +14,6 @@ export function alterForm() {
 		buttonGroup.appendChild(buttons.listButton);
 		buttonGroup.appendChild(buttons.tableButton);
 		divFormatter.appendChild(buttonGroup);
-
 		divFormatter.appendChild(buttons.silentButton);
 		divFormatter.appendChild(buttons.languageDoubleButton);
 		divFormatter.appendChild(buttons.codeBlockDoubleButton);
@@ -23,7 +22,7 @@ export function alterForm() {
 			"border-black/10", "bg-white", "dark:border-gray-900/50", "dark:text-white", "dark:bg-gray-700",
 			"shadow-[0_0_10px_rgba(0,0,0,0.10)]", "dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]"
 		);
-
+		divFormatter.appendChild(buttons.drupalVersionButton);
 		form.prepend(divFormatter);
 		buttonGroup.addEventListener('click', (event) => {
 			toggleButton(buttonGroup.id, event);

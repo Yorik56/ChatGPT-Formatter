@@ -11,6 +11,7 @@ export function updateTextareaValue(textareaElem) {
 		const languageButton = document.querySelector('.language_selector');
 		const codeStyleButton = document.querySelector('.code_style_formatter');
 		const silentButton = document.querySelector('.silent_mode');
+		const drupalVersionButton = document.querySelector('.drupal_version_selector'); // Selecting the Drupal version button
 
 		if (textButton && textButton.classList.contains('active')) {
 			format += 'Your next answer will be formatted as text.\n';
@@ -31,31 +32,33 @@ export function updateTextareaValue(textareaElem) {
 			format += 'Your next answer will be a table.\n';
 			selection = true;
 		}
-
 		if (languageButton && languageButton.classList.contains('active')) {
-			const language = languageButton.getAttribute('data-option'); // Change 'data-language' to 'data-option'
+			const language = languageButton.getAttribute('data-option');
 			format += `Apply the ${language} language.\n`;
 			selection = true;
 		}
-
 		if (codeStyleButton && codeStyleButton.classList.contains('active')) {
-			const codeStyle = codeStyleButton.getAttribute('data-option'); // Change 'data-code-style' to 'data-option'
-			format += `Your next answer will be displayed as a code snippet in ${codeStyle.toLowerCase()} format. \n`;
+			const codeStyle = codeStyleButton.getAttribute('data-option');
+			format += `Your next answer will be displayed as a code snippet in ${codeStyle.toLowerCase()} format.\n`;
 			selection = true;
 		}
-
 		if (silentButton && silentButton.classList.contains('active')) {
 			format += 'In your next answer you\'ll Respond in a very concise manner without providing any explanation. \n';
 			selection = true;
-		} else {
-			format += 'Comment what you\'re doing. \n';
+		}
+
+		// Handle the Drupal version selector
+		if (drupalVersionButton && drupalVersionButton.classList.contains('active')) {
+			const drupalVersion = drupalVersionButton.getAttribute('data-option');
+			format += `Working on a Drupal site using version ${drupalVersion}. Support and responses will be tailored to this version.\n`;
+			selection = true;
 		}
 
 		if (!selection) {
 			format += 'No format selected, your next answer will be plain text. \n';
 		}
 
-		textareaElem.value = format + '\n' + textareaElem.value;
+		textareaElem.value = "===> Chat GPT formatter\n" + format + '<===\n' + textareaElem.value;
 	} else {
 		console.error('Textarea not found');
 	}

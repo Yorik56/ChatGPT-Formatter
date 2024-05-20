@@ -26,12 +26,34 @@ body form button
     margin: 0 20px 0 0;
 }
 
-.double-button-container:hover,
-button:hover, button.active
+.double-button-container:hover > button, .double-button-container > button.active
 {
     background-color: #ffffff29;
     border: 0 solid #ccc;
     border-radius: 5px;
+}
+
+.double-button-container:hover,
+.buttonHover:hover
+{
+    position: relative;
+}
+
+.buttonHover:hover::before, .buttonHover.active:before
+{
+    content: "";
+    background-color: #ffffff29;
+    border: 0 solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    display: block;
 }
 
 .double-button-container button.code_style_formatter:hover,

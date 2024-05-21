@@ -34,7 +34,8 @@ body form button
 }
 
 .double-button-container:hover,
-.buttonHover:hover
+.buttonHover:hover,
+button
 {
     position: relative;
 }
@@ -44,9 +45,9 @@ body form button
     content: "";
     background-color: #ffffff29;
     border: 0 solid #ccc;
-    border-radius: 50%;
+    border-radius: 5px;
     position: absolute;
-    top: -2px;
+    top: -3px;
     left: -2px;
     right: 0;
     bottom: 0;
@@ -69,6 +70,13 @@ body form button
     display: flex;
     align-items: center;
     height: 25px;
+}
+
+.double-button-container > button {
+    padding: 1px;
+    box-sizing: border-box;
+    width: 25px;
+    height: 30px;
 }
 
 .double-button-container > button,

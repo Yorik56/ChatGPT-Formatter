@@ -39,7 +39,11 @@ export function updateTextareaValue(textareaElem) {
 		}
 		if (codeStyleButton && codeStyleButton.classList.contains('active')) {
 			const codeStyle = codeStyleButton.getAttribute('data-option');
-			format += `Your next answer will be displayed as a code snippet in ${codeStyle.toLowerCase()} format.\n`;
+			if (codeStyle === 'sass') {
+				format += "Your next answer will be displayed as a code snippet in indented SASS format.\n";
+			} else {
+				format += `Your next answer will be displayed as a code snippet in ${codeStyle.toLowerCase()} format.\n`;
+			}
 			selection = true;
 		}
 		if (silentButton && silentButton.classList.contains('active')) {

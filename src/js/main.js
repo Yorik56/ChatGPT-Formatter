@@ -20,7 +20,7 @@ if (form) {
 		}
 	}
 	form.addEventListener('keydown', (event) => {
-		if (event.keyCode === 13 && !event.shiftKey) {
+		if (event.key === "Enter" && !event.shiftKey) {
 			event.preventDefault(); // Empêcher le comportement par défaut
 			const textareaElem = document.querySelector('textarea');
 			updateTextareaValue(textareaElem);

@@ -2,8 +2,7 @@
   "manifest_version": 3,
   "name": "Chat GPT ToolKit",
   "version": "1.5",
-  "id": "bc72a110-21f5-4ec9-9a23-d3c0b6590f4f",
-  "description": "Chat GPT ToolKit: découvrez un contrôle précis sur vos interactions avec ChatGPT. Personnalisez le format (texte, table), sélectionnez le langage, mode silencieux et plus !",
+  "description": "Chat GPT ToolKit: contrôlez vos interactions avec ChatGPT. Personnalisez format, langue, mode silencieux et plus !",
   "permissions": [
     "activeTab"
   ],
@@ -43,10 +42,5 @@
         "https://chatgpt.com/*"
       ]
     }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{bc72a110-21f5-4ec9-9a23-d3c0b6590f4f}"
-    }
-  }
+  ]
 }
